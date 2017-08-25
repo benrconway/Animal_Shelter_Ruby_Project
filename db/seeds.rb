@@ -34,6 +34,15 @@ animal2 = Animal.new({
 
 animal2.save()
 
+animal3 = Animal.new({
+  "name" => "Ronny",
+  "species" => "Red Tailed Black Cockatoo",
+  "ecological_status" => "near threatened",
+  "habitat" => "eucalypt woodlands"
+  })
+
+animal3.save()
+
 s_ship1 = Sponsorship.new({
   "animal_id" => animal1.id,
   "member_id" => member1.id,
@@ -45,11 +54,19 @@ s_ship2 = Sponsorship.new({
   "animal_id" => animal2.id,
   "member_id" => member2.id,
   "value" => 5000,
-  "date_sponsored" => "2017-04-18"
+  "date_sponsored" => "2016-01-12"
   })
+
+  s_ship3 = Sponsorship.new({
+    "animal_id" => animal3.id,
+    "member_id" => member1.id,
+    "value" => 1250,
+    "date_sponsored" => "2015-07-18"
+    })
 
 s_ship1.save()
 s_ship2.save()
+s_ship3.save()
 
 binding.pry
 nil
