@@ -21,7 +21,8 @@ animal1 = Animal.new({
   "name" => "Terry",
   "species" => "Thorny Devil",
   "ecological_status" => "conservation dependant",
-  "habitat" => "spinifex scrubland"
+  "habitat" => "spinifex scrubland",
+  "first_sighting" => "2005-06-22"
   })
 animal1.save()
 
@@ -29,7 +30,8 @@ animal2 = Animal.new({
   "name" => "Barry",
   "species" => "Greater Bilby",
   "ecological_status" => "endangered",
-  "habitat" => "semi-arid shrubland"
+  "habitat" => "semi-arid shrubland",
+  "first_sighting" => "2005-06-22"
   })
 
 animal2.save()
@@ -38,7 +40,8 @@ animal3 = Animal.new({
   "name" => "Ronny",
   "species" => "Red Tailed Black Cockatoo",
   "ecological_status" => "near threatened",
-  "habitat" => "eucalypt woodlands"
+  "habitat" => "eucalypt woodlands",
+  "first_sighting" => "2005-06-22"
   })
 
 animal3.save()

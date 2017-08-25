@@ -12,7 +12,8 @@ CREATE TABLE animals(
   name VARCHAR(255),
   species VARCHAR(255),
   ecological_status VARCHAR(255),
-  habitat VARCHAR(255)
+  habitat VARCHAR(255),
+  first_sighting DATE
 );
 
 CREATE TABLE sponsorships(
