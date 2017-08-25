@@ -3,10 +3,19 @@ require_relative("../models/member.rb")
 require_relative("../models/sponsorship.rb")
 require_relative("../models/animal.rb")
 
-member1 = Member.new({ "name" => "John" })
+Member.delete_all()
+Animal.delete_all()
+Sponsorship.delete_all()
+
+
+member1 = Member.new({ "name" => "Ben" })
 member2 = Member.new({ "name" => "Tiffany" })
+member3 = Member.new({ "name" => "Sharon" })
+
 member1.save()
 member2.save()
+member3.save()
+
 
 animal1 = Animal.new({
   "name" => "Terry",
@@ -24,6 +33,23 @@ animal2 = Animal.new({
   })
 
 animal2.save()
+
+s_ship1 = Sponsorship.new({
+  "animal_id" => animal1.id,
+  "member_id" => member1.id,
+  "value" => 500,
+  "date_sponsored" => "April 18 2017"
+  })
+
+s_ship2 = Sponsorship.new({
+  "animal_id" => animal2.id,
+  "member_id" => member2.id,
+  "value" => 5000,
+  "date_sponsored" => "2017-04-18"
+  })
+
+s_ship1.save()
+s_ship2.save()
 
 binding.pry
 nil
