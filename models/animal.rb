@@ -32,4 +32,14 @@ class Animal
     return animal_hash.map() {|animal_info| Animal.new(animal_info)}
   end
 
+  def Animal.delete_all()
+    sql = "DELETE FROM animals;"
+    SqlRunner.run(sql)
+  end
+
+  def Animal.delete_by_id(id)
+    sql = "DELETE FROM animals WHERE id =$1;"
+    SqlRunner.run(sql, [id])
+  end
+
 end

@@ -27,4 +27,15 @@ class Member
     return member_hash.map() {|member_info| Member.new(member_info)}
   end
 
+  def Member.delete_all()
+    sql = "DELETE FROM members;"
+    SqlRunner.run(sql)
+  end
+
+  def Member.delete_by_id(id)
+    sql = "DELETE FROM members WHERE id = $1;"
+    SqlRunner.run(sql, [id])
+  end
+
+
 end

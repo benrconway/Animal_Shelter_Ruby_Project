@@ -28,4 +28,15 @@ class Sponsorship
     return info_hash.map() {|sponsorship| Sponsorship.new(sponsorship)}
   end
 
+  def Sponsorship.delete_all()
+    sql = "DELETE FROM sponsorships;"
+    SqlRunner.run(sql)
+  end
+
+  def Sponsorship.delete_by_id(id)
+    sql = "DELETE FROM sponsorships WHERE id = $1;"
+    SqlRunner.run(sql, [id])
+
+  end
+
 end
