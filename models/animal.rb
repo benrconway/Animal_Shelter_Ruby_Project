@@ -42,4 +42,17 @@ class Animal
     SqlRunner.run(sql, [id])
   end
 
+  def update()
+    sql = "UPDATE animals SET (name, species, ecological_status, habitat)
+      = ($1, $2, $3, $4) WHERE id = $5;"
+    values = [@name, @species, @ecological_status, @habitat, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def Animal.find(id)
+    sql = "SELECT * FROM animals WHERE id = $1;"
+    result = SqlRunner.run(sql, [id]).first
+    return Animal.new(result)  
+  end
+
 end

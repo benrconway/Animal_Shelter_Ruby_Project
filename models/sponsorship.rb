@@ -40,7 +40,31 @@ class Sponsorship
   def Sponsorship.delete_by_id(id)
     sql = "DELETE FROM sponsorships WHERE id = $1;"
     SqlRunner.run(sql, [id])
-
   end
 
+  def update()
+    sql = "UPDATE sponsorships SET
+    (animal_id, member_id, value, date_sponsored)
+     = ($1, $2, $3, $4) WHERE id = $5;"
+     values = [@animal_id, @member_id, @value, @date_sponsored, @id]
+     SqlRunner.run(sql,values)
+   end
+
+   def Sponsorship.find(id)
+     sql = "SELECT * FROM sponsorships WHERE id = $1;"
+     result = SqlRunner.run(sql, [id])
+     return Sponsorship.new(result.first)
+   end
+
+   def sponsor()
+     sql = "SELECT * FROM members WHERE id = $1;"
+     result = SqlRunner.run(sql, [@member_id]).first()
+     return Member.new(result)
+   end
+
+   def sponsored()
+     sql = "SELECT * FROM animals WHERE id = $1;"
+     result = SqlRunner.run(sql, [@animal_id]).first()
+     return Animal.new(result)
+   end
 end
