@@ -13,7 +13,7 @@ class Member
 
   def save()
     sql = "INSERT INTO members (name) VALUES ($1) RETURNING id;"
-    result = SqlRunner.run(sql)
+    result = SqlRunner.run(sql, [@name])
     @id = result[0]["id"].to_i
   end
 
