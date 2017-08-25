@@ -14,6 +14,22 @@ class Animal
     @habitat = animal_details["habitat"]
   end
 
+  def save()
+    sql = "INSERT INTO animals (name, species, ecological_status, habitat)
+    VALUES ($1, $2, $3, $4) RETURNING id;"
+    values = [@name, @species, @ecological_status, @habitat]
+    result = SqlRunner.run(sql, values)
+    @id = result[0]["id"].to_i
+  end
 
+  def Animal.all()
+    sql = "SELECT * FROM animals;"
+    result = SqlRunner.run(sql)
+    return Animal.map_items(result)
+  end
+
+  def Animal.map_items(animal_hash)
+    return animal_hash.map() {|animal_info| Animal.new(animal_info)}
+  end
 
 end
