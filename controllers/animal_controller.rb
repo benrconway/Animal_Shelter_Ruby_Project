@@ -18,12 +18,19 @@ end
 post "/animals" do
   animal = Animal.new(params)
   animal.save
-  redirect "/animals"
+  redirect to "/animals"
 end
 
+#Edit route
 get "/animals/:id/edit" do
   @animal = Animal.find(params[:id])
   erb(:"animals/edit")
+end
+
+post "/animals/:id" do
+  animal = Animal.new(params)
+  animal.update()
+  redirect to "/animals/#{animal.id}"
 end
 
 get "/animals/:id" do

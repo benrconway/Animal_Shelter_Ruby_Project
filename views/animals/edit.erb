@@ -1,0 +1,25 @@
+<h2>Edit existing animal</h2>
+<form method="POST" action="/animals/<%=@animal.id%>">
+  <label for="name_of_animal">Name:</label>
+  <input type="text" name="name" id="name_of_animal" value="<%=@animal.name%>"/>
+  <br>
+  <label for="species">Species:</label>
+  <input type="text" name="species" id="species" value="<%=@animal.species%>"/>
+  <br>
+  <label for="ecological_status">Status</label>
+  <select id="ecological_status" name="ecological_status" value="<%=@animal.ecological_status%>">
+    <option value="endangered">Endangered</option>
+    <option value="conservation dependant">Conservation dependant</option>
+    <option value="near threatened">Near threatened</option>
+    <option value="stable">Stable</option>
+    <option value="common">Common</option>
+  </select>
+  <br>
+  <label for="habitat">Habitat</label>
+  <input type="text" name="habitat" id="habitat" value="<%=@animal.habitat%>"/>
+  <br>
+  <label for="first_sighting">First Sighting</label>
+  <input type="date" name="first_sighting" id="first_sighting" value="<%=@animal.first_sighting%>"/>
+
+  <input type="submit" value="Submit Changes"/>
+</form>
