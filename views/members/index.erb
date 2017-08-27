@@ -1,0 +1,11 @@
+<h2>Here is a current list of Members</h2>
+
+<p><a href="/members/new">Click here to join our Society</a></p>
+
+<% for member in @members do %>
+<p>Member ID:<%=member.id%></p>
+<p>Name:<%=member.name%></p>
+
+<p><a href="/members/<%=member.id%>">More details</a></p>
+<hr/>
+<% end %>
