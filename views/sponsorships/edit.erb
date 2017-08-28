@@ -1,22 +1,26 @@
 <h2>Edit the details of your pledge here</h2>
 
 <form action="/sponsorships/<%=@record.id%>" method="POST">
-  <label for="member_name">Member</label>
+  <p>Pledge number:<%=@record.id%></p>
+  <label for="member_name">Member:</label>
   <select name="member_id" id="member_name">
     <% for member in @members do  %>
-    <option <%= "selected" if(member.id == @record.member_id)%> value="<%=member.id%>"><%=member.name%></option>
+    <option <%= 'selected' if member.id == @record.member_id %> value="<%=member.id%>"><%=member.name%></option>
     <% end %>
   </select>
   <br>
-  <label for="animal_being_sponsored">Animal</label>
+  <label for="animal_being_sponsored">Animal:</label>
   <select name="animal_id" id="animal_being_sponsored">
     <% for animal in @animals do  %>
-    <%if animal.id == @record.animal_id%>
-    <option selected value="<%=animal.id%>"><%=animal.name%></option>
+    <% if animal.id == @record.animal_id %>
+    <option value="<%=animal.id%>" selected><%=animal.name%></option>
+    <% else %>
+    <option value="<%=animal.id%>"><%=animal.name%></option>
+    <% end %>
     <% end %>
   </select>
   <br>
-  <label for="pledge_value">Pledge value</label>
+  <label for="pledge_value">Pledge value:</label>
   <p>£<input type="number" name="value" id="pledge_value" value="<%=@record.value%>">/month</p>
   <br>
   <label for="sponsorship_start_date">Starting from:</label>
