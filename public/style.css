@@ -15,6 +15,15 @@ body {
   background-size: cover;
 }
 
+.buttons {
+    border-radius: 25px;
+    background: salmon;
+    width: 100px;
+    height: 30px;
+    margin: 10px, 0px;
+    padding: 10px;
+}
+
 .profile-pic {
   height: 200px;
   width: 200px
