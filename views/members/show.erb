@@ -2,6 +2,7 @@
 
 <p>Member ID:<%=@member.id%></p>
 <p>Name:<%=@member.name%></p>
+<img class="profile-pic" src="<%=@member.picture%>">
 
 <form action="/members/<%=@member.id%>/edit" method="GET">
   <input type="submit" value="Edit">

@@ -9,7 +9,31 @@ nav, li {
 
 }
 
+footer {
+  bottom: 0;
+  position: fixed;
+}
+
 body {
     font-family: 'Fjalla One', serif;
     font-size: 16px;
+    color: wheat;
+    background: url(https://austravelphotography.files.wordpress.com/2014/06/20140613-_mg_7390.jpg) no-repeat fixed center;
+    background-size:cover;
+}
+
+.ico {
+  height: 35px;
+  width: 35px;
+}
+
+#bground{
+  margin: 0 auto;
+}
+
+#all_over {
+    font-size: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }

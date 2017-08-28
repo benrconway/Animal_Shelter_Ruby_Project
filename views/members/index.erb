@@ -3,6 +3,7 @@
 <p><a href="/members/new">Click here to join our Society</a></p>
 
 <% for member in @members do %>
+<img class="profile-pic" src="<%=member.picture%>"/>
 <p>Member ID:<%=member.id%></p>
 <p>Name:<%=member.name%></p>
 

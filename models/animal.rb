@@ -3,7 +3,7 @@ require_relative("../db/sql_runner.rb")
 
 class Animal
 
-  attr_accessor(:name, :species, :ecological_status, :habitat, :first_sighting)
+  attr_accessor(:name, :species, :ecological_status, :habitat, :first_sighting, :image)
   attr_reader(:id)
 
   def initialize(animal_details)
@@ -13,12 +13,13 @@ class Animal
     @ecological_status = animal_details["ecological_status"]
     @habitat = animal_details["habitat"]
     @first_sighting = animal_details["first_sighting"]
+    @image = animal_details["image"]
   end
 
   def save()
-    sql = "INSERT INTO animals (name, species, ecological_status, habitat, first_sighting)
-    VALUES ($1, $2, $3, $4, $5) RETURNING id;"
-    values = [@name, @species, @ecological_status, @habitat, @first_sighting]
+    sql = "INSERT INTO animals (name, species, ecological_status, habitat, first_sighting, image)
+    VALUES ($1, $2, $3, $4, $5, $6) RETURNING id;"
+    values = [@name, @species, @ecological_status, @habitat, @first_sighting, @image]
     result = SqlRunner.run(sql, values)
     @id = result[0]["id"].to_i
   end
@@ -44,9 +45,9 @@ class Animal
   end
 
   def update()
-    sql = "UPDATE animals SET (name, species, ecological_status, habitat, first_sighting)
-      = ($1, $2, $3, $4, $5) WHERE id = $6;"
-    values = [@name, @species, @ecological_status, @habitat, @first_sighting, @id]
+    sql = "UPDATE animals SET (name, species, ecological_status, habitat, first_sighting, image)
+      = ($1, $2, $3, $4, $5, $6) WHERE id = $7;"
+    values = [@name, @species, @ecological_status, @habitat, @first_sighting, @image, @id]
     SqlRunner.run(sql, values)
   end
 

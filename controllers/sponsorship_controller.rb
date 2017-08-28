@@ -10,8 +10,6 @@ get "/sponsorships" do
   erb(:"sponsorships/index")
 end
 
-
-
 #edit
 get "/sponsorships/:id/edit" do
   @animals = Animal.all()

@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS members;
 
 CREATE TABLE members(
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  picture TEXT
 );
 
 CREATE TABLE animals(
@@ -13,7 +14,8 @@ CREATE TABLE animals(
   species VARCHAR(255),
   ecological_status VARCHAR(255),
   habitat VARCHAR(255),
-  first_sighting DATE
+  first_sighting DATE,
+  image TEXT
 );
 
 CREATE TABLE sponsorships(

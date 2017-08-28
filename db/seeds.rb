@@ -8,9 +8,19 @@ Animal.delete_all()
 Sponsorship.delete_all()
 
 
-member1 = Member.new({ "name" => "Ben" })
-member2 = Member.new({ "name" => "Tiffany" })
-member3 = Member.new({ "name" => "Sharon" })
+member1 = Member.new({
+  "name" => "Ben",
+  "picture" => "https://us.123rf.com/450wm/warrengoldswain/warrengoldswain1411/warrengoldswain141100110/33791129-fashionable-african-hipster-man-portrait-leaning-against-distressed-urban-wall-background.jpg?ver=6" })
+
+member2 = Member.new({
+  "name" => "Tiffany",
+  "picture" => "https://s3-eu-west-1.amazonaws.com/pcs01.photocase.com/l/lp7zisbf/2zcf6egc/photocase2zcf6egc3.jpg?1450857360"
+   })
+
+member3 = Member.new({
+  "name" => "Sharon",
+  "picture" => "https://static.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg"
+   })
 
 member1.save()
 member2.save()
@@ -22,7 +32,8 @@ animal1 = Animal.new({
   "species" => "Thorny Devil",
   "ecological_status" => "conservation dependant",
   "habitat" => "spinifex scrubland",
-  "first_sighting" => "2005-06-22"
+  "first_sighting" => "2005-06-22",
+  "image" => "http://www.factzoo.com/sites/all/img/reptiles/lizards/thorny/upclose-thorny-moloch-devil.jpg"
   })
 animal1.save()
 
@@ -31,20 +42,33 @@ animal2 = Animal.new({
   "species" => "Greater Bilby",
   "ecological_status" => "endangered",
   "habitat" => "semi-arid shrubland",
-  "first_sighting" => "2005-06-22"
+  "first_sighting" => "2005-06-22",
+  "image" => "http://www.australianwildlife.org/media/66801/greater-bilby_wlawler_sml.jpg"
   })
 
 animal2.save()
 
 animal3 = Animal.new({
   "name" => "Ronny",
-  "species" => "Red Tailed Black Cockatoo",
+  "species" => "Red-Tailed Black Cockatoo",
   "ecological_status" => "near threatened",
   "habitat" => "eucalypt woodlands",
-  "first_sighting" => "2005-06-22"
+  "first_sighting" => "2005-06-22",
+  "image" => "https://i.pinimg.com/736x/62/78/38/627838e3842d4de784415e62a9721c59--large-black-the-black.jpg"
   })
 
 animal3.save()
+
+animal4 = Animal.new({
+  "name" => "Marvin",
+  "species" => "Red Kangaroo",
+  "ecological_status" => "stable",
+  "habitat" => "mulga plains",
+  "first_sighting" => "2005-06-22",
+  "image" => "http://i.dailymail.co.uk/i/pix/2015/06/04/04/2956878200000578-3110240-image-a-77_1433387519005.jpg"
+  })
+
+  animal4.save()
 
 s_ship1 = Sponsorship.new({
   "animal_id" => animal1.id,
@@ -70,6 +94,3 @@ s_ship2 = Sponsorship.new({
 s_ship1.save()
 s_ship2.save()
 s_ship3.save()
-
-binding.pry
-nil

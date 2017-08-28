@@ -3,17 +3,18 @@ require_relative("../db/sql_runner.rb")
 
 class Member
 
-  attr_accessor(:name)
+  attr_accessor(:name, :picture)
   attr_reader(:id)
 
   def initialize(member_details)
     @id = member_details["id"].to_i if member_details["id"]
     @name = member_details["name"]
+    @picture = member_details["picture"]
   end
 
   def save()
-    sql = "INSERT INTO members (name) VALUES ($1) RETURNING id;"
-    result = SqlRunner.run(sql, [@name])
+    sql = "INSERT INTO members (name, picture) VALUES ($1, $2) RETURNING id;"
+    result = SqlRunner.run(sql, [@name, @picture])
     @id = result[0]["id"].to_i
   end
 
@@ -38,8 +39,8 @@ class Member
   end
 
   def update()
-    sql = "UPDATE members SET (name) = ($1) WHERE id = $2;"
-    SqlRunner.run(sql, [@name, @id])
+    sql = "UPDATE members SET (name, picture) = ($1, $2) WHERE id = $3;"
+    SqlRunner.run(sql, [@name, @picture, @id])
   end
 
   def Member.find(id)
