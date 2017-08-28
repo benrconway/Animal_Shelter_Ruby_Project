@@ -1,7 +1,8 @@
+<div class="info-backing">
 <h2>Here is a list of our current sponsorships</h2>
 <div>
   <p><a href="/sponsorships/new">Make a pledge today!</a></p>
-
+<!--pretify the boxes somehow... -->
   <% for record in @sponsorships do %>
     <div class="form-sheet">
       <p>Pledge number:<%=record.id%></p>
@@ -9,4 +10,5 @@
       <p><a href="/sponsorships/<%=record.id%>">Click for more details</a></p>
     </div>
   <% end %>
+</div>
 </div>

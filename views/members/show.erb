@@ -1,13 +1,23 @@
-<h2>More details including sponsorships in future!</h2>
+<div class="info-backing">
+<div>
+  <h2>More details including sponsorships in future!</h2>
+</div>
+<div>
+  <p>Member ID:<%=@member.id%></p>
+  <p>Name:<%=@member.name%></p>
+  <img class="profile-pic" src="<%=@member.picture%>">
 
-<p>Member ID:<%=@member.id%></p>
-<p>Name:<%=@member.name%></p>
-<img class="profile-pic" src="<%=@member.picture%>">
+  <form action="/members/<%=@member.id%>/edit" method="GET">
+    <input type="submit" value="Edit">
+  </form>
+  <br>
+  <form action="/members/<%=@member.id%>/delete" method="POST">
+    <input type="submit" value="Delete"/>
+  </form>
+</div>
+<hr/>
 
-<form action="/members/<%=@member.id%>/edit" method="GET">
-  <input type="submit" value="Edit">
-</form>
-<br>
-<form action="/members/<%=@member.id%>/delete" method="POST">
-  <input type="submit" value="Delete"/>
-</form>
+<div>
+  <p> I want all the pledge pictures and links here</p>
+</div>
+</div>

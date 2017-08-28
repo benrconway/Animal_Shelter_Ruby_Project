@@ -1,11 +1,13 @@
-<h2>Changed your name?</h2>
-
-<form action="/members/<%=@member.id%>" method="POST">
-  <label for="name_field">Name:</label>
-  <input type="text" name="name" id="name_field" value="<%=@member.name%>"/>
-  <br>
-  <label for="picture_url">Enter image url here:</label>
-  <input type="text" name="picture" id="picture_url" value="<%=@member.picture%>"/>
-<input type="submit" value="Submit changes">
-
-</form>
+<div>
+  <h2>Changed your name?</h2>
+  <div>
+    <form action="/members/<%=@member.id%>" method="POST">
+      <label for="name_field">Name:</label>
+      <input type="text" name="name" id="name_field" value="<%=@member.name%>"/>
+      <br>
+      <label for="picture_url">Enter image url here:</label>
+      <input type="text" name="picture" id="picture_url" value="<%=@member.picture%>"/>
+    <input type="submit" value="Submit changes">
+    </form>
+  </div>
+</div>

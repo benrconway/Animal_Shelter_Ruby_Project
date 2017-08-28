@@ -1,13 +1,6 @@
 nav, li {
   display: inline;
 }
-.form-sheet {
-  display: inline-block;
-  background-color: mediumaquamarine;
-
-  border: 2px solid black;
-
-}
 
 footer {
   bottom: 0;
@@ -15,13 +8,25 @@ footer {
 }
 
 body {
-    font-family: 'Fjalla One', serif;
-    font-size: 16px;
-    color: wheat;
-    background: url(https://austravelphotography.files.wordpress.com/2014/06/20140613-_mg_7390.jpg) no-repeat fixed center;
-    background-size:cover;
+  font-family: 'Fjalla One', serif;
+  font-size: 16px;
+  color: wheat;
+  background: url(https://austravelphotography.files.wordpress.com/2014/06/20140613-_mg_7390.jpg) no-repeat fixed center;
+  background-size: cover;
 }
 
+.profile-pic {
+  height: 200px;
+  width: 200px
+}
+.info-backing {
+  background-color: #cd844d;
+}
+.form-sheet {
+  display: inline-block;
+  background-color: #c4844d;
+  border: 2px solid black;
+}
 .ico {
   height: 35px;
   width: 35px;

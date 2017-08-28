@@ -1,14 +1,17 @@
-<div>
+<div class="info-backing">
   <h2>This site has a list of animals, right here... check out the animal sponsorships on offer!</h2>
 <p><a href="/animals/new">Add a new Animal to the list</a></p>
-</div>
+
 
 <% for animal in @animals do %>
-<img class="profile-pic" src="<%=animal.image%>"/>
-<p>Name: <%=animal.name%></p>
-<p>Species: <%=animal.species%></p>
-<p>Status: <%=animal.ecological_status%></p>
+  <div class="form-sheet">
+    <img class="profile-pic" src="<%=animal.image%>"/>
+    <p>Name: <%=animal.name%></p>
+    <p>Species: <%=animal.species%></p>
+    <p>Status: <%=animal.ecological_status%></p>
 
-<p><a href="/animals/<%=animal.id%>">More details</a></p>
-<hr/>
+    <p><a href="/animals/<%=animal.id%>">More details</a></p>
+    <hr/>
+  </div>
   <% end %>
+</div>
