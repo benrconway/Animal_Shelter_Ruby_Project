@@ -7,10 +7,10 @@ class Sponsorship
   attr_reader(:id)
 
   def initialize(sponsorship_details)
-    @id = sponsorship_details["id"] if sponsorship_details["id"]
-    @animal_id = sponsorship_details["animal_id"]
-    @member_id = sponsorship_details["member_id"]
-    @value = sponsorship_details["value"]
+    @id = sponsorship_details["id"].to_i if sponsorship_details["id"]
+    @animal_id = sponsorship_details["animal_id"].to_i
+    @member_id = sponsorship_details["member_id"].to_i
+    @value = sponsorship_details["value"].to_i
     @date_sponsored = sponsorship_details["date_sponsored"]
   end
 

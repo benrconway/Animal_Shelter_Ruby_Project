@@ -6,7 +6,7 @@ require_relative("../models/sponsorship.rb")
 
 #Index
 get "/sponsorships" do
-  @s_ships = Sponsorship.all()
+  @sponsorships = Sponsorship.all()
   erb(:"sponsorships/index")
 end
 
@@ -16,7 +16,7 @@ end
 get "/sponsorships/:id/edit" do
   @animals = Animal.all()
   @members = Member.all()
-  @record = Sponsorship.find(params[:id])
+  @sponsorship = Sponsorship.find(params[:id])
   erb(:"sponsorships/edit")
 end
 
