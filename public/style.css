@@ -1,3 +1,15 @@
 nav, li {
   display: inline;
 }
+.form-sheet {
+  display: inline-block;
+  background-color: mediumaquamarine;
+
+  border: 2px solid black;
+
+}
+
+body {
+    font-family: 'Fjalla One', serif;
+    font-size: 16px;
+}
