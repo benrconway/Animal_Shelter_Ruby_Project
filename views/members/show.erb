@@ -1,4 +1,4 @@
-<div class="info-backing form-norm">
+<div id="single-el" class="info-backing form-norm">
   <h2><%=@member.name%></h2>
   <div class="profile-pic" style="background-image: url('<%=@member.picture%>')"></div>
 
@@ -13,6 +13,7 @@
 <hr/>
 <div class="info-backing">
   <h3><%=@member.name.capitalize %> currently sponsors the following Nature Advocates:</h3>
+<div class="item-container">
     <% for animal in @animals do %>
     <div class="form-norm">
       <a href="/animals/<%=animal.id%>">
@@ -22,6 +23,7 @@
       <p>Species: <%=animal.species%></p>
     </div>
   <% end %>
+</div>
 <br>
 <br>
 </div>

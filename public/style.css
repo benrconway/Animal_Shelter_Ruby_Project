@@ -1,11 +1,14 @@
+html{
+  color:ivory;
+}
 nav, li {
   display: inline;
 }
 a:visited{
-  color: wheat;
+  color: ivory;
 }
 a:link{
-  color: wheat;
+  color: ivory;
 }
 
 footer {
@@ -16,7 +19,7 @@ footer {
 body {
   font-family: 'Fjalla One', serif;
   font-size: 16px;
-  color: wheat;
+  color: ivory;
   background: url(https://austravelphotography.files.wordpress.com/2014/06/20140613-_mg_7390.jpg) no-repeat fixed center;
   background-size: cover;
 }
@@ -52,7 +55,34 @@ body {
   border-radius: 10px;
   background-color: #cd844d;
 }
+.backing-2{
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #cd844d;
+}
+.form-new {
+  padding: 15px;
+  margin:10px;
+  border: 2px solid goldenrod;
+}
 
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-pledge {
+  border-radius: 20px;
+  display: flex;
+  background-color: #c4844d;
+  border: 2px solid black;
+  flex: 1;
+  max-width: 600px;
+  margin: 10px;
+}
 .form-norm {
   width: 200px;
   border-radius: 20px;
@@ -60,9 +90,18 @@ body {
   background-color: #c4844d;
   border: 2px solid black;
 }
+.item-container{
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+}
 .ico {
   height: 35px;
   width: 35px;
+}
+
+.pledge-text{
+  padding: 10px;
 }
 
 #all_over {
@@ -75,4 +114,8 @@ body {
 #pledges{
   display:flex;
   flex-grow: 1;
+}
+
+#single-el{
+  margin-left: 40%;
 }
