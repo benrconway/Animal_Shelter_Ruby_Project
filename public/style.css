@@ -14,6 +14,9 @@ body {
   background: url(https://austravelphotography.files.wordpress.com/2014/06/20140613-_mg_7390.jpg) no-repeat fixed center;
   background-size: cover;
 }
+.beside{
+  display:inline;
+}
 
 .buttons {
     border-radius: 25px;
@@ -24,14 +27,20 @@ body {
     padding: 10px;
 }
 
+.ani-pic{
+  border-radius: 20px;
+}
+
 .profile-pic {
   height: 200px;
   width: 200px
 }
 .info-backing {
+  border-radius: 20px;
   background-color: #cd844d;
 }
 .form-sheet {
+  border-radius: 20px;
   display: inline-block;
   background-color: #c4844d;
   border: 2px solid black;
@@ -39,10 +48,6 @@ body {
 .ico {
   height: 35px;
   width: 35px;
-}
-
-#bground{
-  margin: 0 auto;
 }
 
 #all_over {

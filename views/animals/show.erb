@@ -1,24 +1,24 @@
-<div class="info-backing">
-  <div>
+<div>
+  <div class="form-sheet info-backing">
     <h2>Specifics of <%=@animal.name%></h2>
+    <div>
+      <img class="profile-pic ani-pic" src="<%=@animal.image%>"/>
+    </div>
     <p>Species: <%=@animal.species%></p>
     <p>Status: <%=@animal.ecological_status%></p>
     <p>Habitat: <%=@animal.habitat%></p>
     <p>First Sighting: <%=@animal.first_sighting%></p>
+    <p><em><a href="/sponsorships/<%=@animal.id%>/sponsor">Sponsor Me!</a></em></p>
     <br>
 
     <form action="/animals/<%=@animal.id%>/edit" method="GET">
       <input type="submit" value="Edit">
     </form>
-    <br>
     <form action="/animals/<%=@animal.id%>/delete" method="POST">
       <input type="submit" value="Delete"/>
     </form>
+
   </div>
-  <div>
-    <img class="profile-pic" src="<%=@animal.image%>"/>
-  </div>
-    <hr/>
 </div>
 <!-- <div>
   <p>I want a sponsor me, with self populating table</p>

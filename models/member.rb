@@ -49,4 +49,12 @@ class Member
     return Member.new(result)
   end
 
+  def sponsors()
+    sql = "SELECT animals.* FROM animals
+    INNER JOIN sponsorships ON animals.id = sponsorships.animal_id
+    INNER JOIN members ON sponsorships.member_id = members.id
+    WHERE members.id = $1;"
+    result = SqlRunner.run(sql, [@id])
+    return Animal.map_items(result)
+  end
 end

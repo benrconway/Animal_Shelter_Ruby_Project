@@ -1,23 +1,25 @@
-<div class="info-backing">
-<div>
-  <h2>More details including sponsorships in future!</h2>
-</div>
-<div>
-  <p>Member ID:<%=@member.id%></p>
-  <p>Name:<%=@member.name%></p>
+<div class="info-backing form-sheet">
+  <h2><%=@member.name%></h2>
   <img class="profile-pic" src="<%=@member.picture%>">
 
-  <form action="/members/<%=@member.id%>/edit" method="GET">
-    <input type="submit" value="Edit">
-  </form>
-  <br>
-  <form action="/members/<%=@member.id%>/delete" method="POST">
-    <input type="submit" value="Delete"/>
-  </form>
+    <form action="/members/<%=@member.id%>/edit" method="GET">
+      <input type="submit" value="Edit">
+    </form>
+    <br>
+    <form action="/members/<%=@member.id%>/delete" method="POST">
+      <input type="submit" value="Delete"/>
+    </form>
 </div>
 <hr/>
-
-<div>
-  <p> I want all the pledge pictures and links here</p>
-</div>
+<div class="info-backing">
+  <h3><%=@member.name.capitalize %> currently sponsors the following Nature Advocates:</h3>
+    <% for animal in @animals do %>
+    <div class="form-sheet">
+      <a href="/animals/<%=animal.id%>"><img class="profile-pic ani-pic" src="<%=animal.image%>" alt="Image of a <%=animal.species%>"/></a>
+      <p>Name: <%=animal.name%></p>
+      <p>Species: <%=animal.species%></p>
+    </div>
+  <% end %>
+<br>
+<br>
 </div>

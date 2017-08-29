@@ -1,6 +1,8 @@
 require("minitest/autorun")
 require("minitest/rg")
-require_relative("../models/*")
+require_relative("../models/animal.rb")
+require_relative("../models/member.rb")
+require_relative("../models/sponsorship.rb")
 
 class ConservationTest < Minitest::Test
 
@@ -78,6 +80,5 @@ class ConservationTest < Minitest::Test
         })
   end
 
-  
 
 end

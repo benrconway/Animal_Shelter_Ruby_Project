@@ -5,12 +5,10 @@
 </div>
   <% for member in @members do %>
 <div class="form-sheet">
-  <img class="profile-pic" src="<%=member.picture%>"/>
-  <p>Member ID:<%=member.id%></p>
+  <a href="/members/<%=member.id%>"><img class="profile-pic" src="<%=member.picture%>"/></a>
   <p>Name:<%=member.name%></p>
 
   <p><a href="/members/<%=member.id%>">More details</a></p>
-  <hr/>
 </div>
   <% end %>
 </div>

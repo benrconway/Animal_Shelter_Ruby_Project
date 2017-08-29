@@ -94,3 +94,6 @@ s_ship2 = Sponsorship.new({
 s_ship1.save()
 s_ship2.save()
 s_ship3.save()
+
+binding.pry
+nil

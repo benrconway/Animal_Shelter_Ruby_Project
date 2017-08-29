@@ -42,6 +42,14 @@ post "/sponsorships/:id/delete" do
   redirect to "/sponsorships"
 end
 
+#Specific sponsorship route
+get "/sponsorships/:id/sponsor" do
+  @members = Member.all()
+  @animals = Animal.all()
+  @animal = Animal.find(params[:id])
+  erb(:"sponsorships/sponsor")
+end
+
 #Show
 get "/sponsorships/:id" do
   @record = Sponsorship.find(params[:id])

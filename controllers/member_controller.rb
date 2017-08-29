@@ -24,6 +24,7 @@ end
 #Show
 get "/members/:id" do
   @member = Member.find(params[:id])
+  @animals = @member.sponsors()
   erb(:"members/show")
 end
 

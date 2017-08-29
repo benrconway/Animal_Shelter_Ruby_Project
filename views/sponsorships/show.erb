@@ -1,4 +1,6 @@
+<div class="info-backing">
 <h2>Pledge number:<%=@record.id%></h2>
+<div>
 <!-- Add profile pictures from member and animal on either side within their links -->
 <p><a href="/members/<%=@record.member_id%>"><%=@record.sponsor.name.capitalize%></a> is currently sponsoring
   <a href="/animals/<%=@record.animal_id%>"><%=@record.sponsored.name.capitalize%></a>,<br>
@@ -12,3 +14,5 @@
 <form action="/sponsorships/<%=@record.id%>/delete" method="POST">
   <input type="submit" value="End pledge"/>
 </form>
+</div>
+</div>
