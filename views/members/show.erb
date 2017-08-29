@@ -1,6 +1,6 @@
 <div class="info-backing form-sheet">
   <h2><%=@member.name%></h2>
-  <img class="profile-pic" src="<%=@member.picture%>">
+  <div class="profile-pic" style="background-image: url('<%=@member.picture%>')"></div>
 
     <form action="/members/<%=@member.id%>/edit" method="GET">
       <input type="submit" value="Edit">
@@ -15,7 +15,9 @@
   <h3><%=@member.name.capitalize %> currently sponsors the following Nature Advocates:</h3>
     <% for animal in @animals do %>
     <div class="form-sheet">
-      <a href="/animals/<%=animal.id%>"><img class="profile-pic ani-pic" src="<%=animal.image%>" alt="Image of a <%=animal.species%>"/></a>
+      <a href="/animals/<%=animal.id%>">
+        <div class="profile-pic ani-pic" style="background-image: url('<%=animal.image%>')"></div>
+      </a>
       <p>Name: <%=animal.name%></p>
       <p>Species: <%=animal.species%></p>
     </div>

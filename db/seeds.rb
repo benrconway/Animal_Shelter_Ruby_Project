@@ -10,21 +10,30 @@ Sponsorship.delete_all()
 
 member1 = Member.new({
   "name" => "Ben",
-  "picture" => "https://us.123rf.com/450wm/warrengoldswain/warrengoldswain1411/warrengoldswain141100110/33791129-fashionable-african-hipster-man-portrait-leaning-against-distressed-urban-wall-background.jpg?ver=6" })
+  "picture" => "https://us.123rf.com/450wm/warrengoldswain/warrengoldswain1411/warrengoldswain141100110/33791129-fashionable-african-hipster-man-portrait-leaning-against-distressed-urban-wall-background.jpg?ver=6"
+   })
+
+member1.save()
 
 member2 = Member.new({
   "name" => "Tiffany",
   "picture" => "https://s3-eu-west-1.amazonaws.com/pcs01.photocase.com/l/lp7zisbf/2zcf6egc/photocase2zcf6egc3.jpg?1450857360"
    })
 
+member2.save()
+
 member3 = Member.new({
   "name" => "Sharon",
   "picture" => "https://static.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg"
    })
 
-member1.save()
-member2.save()
 member3.save()
+
+member4 = Member.new({
+  "name" => "Ryan",
+  "picture" => "http://blog.timesunion.com/eastgreenbush/files/2010/07/sbn-fonzie2.jpg"
+  })
+member4.save()
 
 
 animal1 = Animal.new({
@@ -38,7 +47,7 @@ animal1 = Animal.new({
 animal1.save()
 
 animal2 = Animal.new({
-  "name" => "Barry",
+  "name" => "Barrietta",
   "species" => "Greater Bilby",
   "ecological_status" => "endangered",
   "habitat" => "semi-arid shrubland",
@@ -77,6 +86,8 @@ s_ship1 = Sponsorship.new({
   "date_sponsored" => "April 18 2017"
   })
 
+s_ship1.save()
+
 s_ship2 = Sponsorship.new({
   "animal_id" => animal2.id,
   "member_id" => member2.id,
@@ -84,16 +95,22 @@ s_ship2 = Sponsorship.new({
   "date_sponsored" => "2016-01-12"
   })
 
-  s_ship3 = Sponsorship.new({
+s_ship2.save()
+
+s_ship3 = Sponsorship.new({
     "animal_id" => animal3.id,
     "member_id" => member1.id,
     "value" => 1250,
     "date_sponsored" => "2015-07-18"
     })
 
-s_ship1.save()
-s_ship2.save()
 s_ship3.save()
 
-binding.pry
-nil
+s_ship4 = Sponsorship.new({
+  "animal_id" => animal2.id,
+  "member_id" => member4.id,
+  "value" => 15,
+  "date_sponsored" => "2017-08-28"
+  })
+
+s_ship4.save()

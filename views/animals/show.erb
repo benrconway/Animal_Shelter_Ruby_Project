@@ -1,9 +1,9 @@
 <div>
   <div class="form-sheet info-backing">
     <h2>Specifics of <%=@animal.name%></h2>
-    <div>
-      <img class="profile-pic ani-pic" src="<%=@animal.image%>"/>
-    </div>
+
+    <div class="profile-pic ani-pic" style="background-image: url('<%=@animal.image%>')"></div>
+
     <p>Species: <%=@animal.species%></p>
     <p>Status: <%=@animal.ecological_status%></p>
     <p>Habitat: <%=@animal.habitat%></p>
@@ -20,6 +20,3 @@
 
   </div>
 </div>
-<!-- <div>
-  <p>I want a sponsor me, with self populating table</p>
-</div> -->

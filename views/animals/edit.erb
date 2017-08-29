@@ -1,6 +1,7 @@
 <div class="info-backing">
   <h2>Edit existing animal</h2>
   <div>
+    <div class="profile-pic ani-pic" style="background-image: url('<%=@animal.image%>')"></div>
     <form method="POST" action="/animals/<%=@animal.id%>">
       <label for="name_of_animal">Name:</label>
       <input type="text" name="name" id="name_of_animal" value="<%=@animal.name%>"/>
@@ -25,7 +26,9 @@
       <br>
       <label for="image_url">Enter image url here:</label>
       <input type="text" name="image" id="image_url" value="<%=@animal.image%>"/>
+      <br>
       <input type="submit" value="Submit Changes"/>
     </form>
+    <a href="/animals/<%=@animal.id%>">Back</a>
 </div>
 </div>

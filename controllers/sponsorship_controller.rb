@@ -6,6 +6,7 @@ require_relative("../models/sponsorship.rb")
 
 #Index
 get "/sponsorships" do
+  @members = Member.all()
   @sponsorships = Sponsorship.all()
   erb(:"sponsorships/index")
 end

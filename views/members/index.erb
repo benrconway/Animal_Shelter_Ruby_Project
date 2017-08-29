@@ -5,7 +5,7 @@
 </div>
   <% for member in @members do %>
 <div class="form-sheet">
-  <a href="/members/<%=member.id%>"><img class="profile-pic ani-pic" src="<%=member.picture%>"/></a>
+  <a href="/members/<%=member.id%>"><div class="profile-pic ani-pic" style="background-image: url('<%=member.picture%>')"></div></a>
   <p>Name:<%=member.name%></p>
 
   <p><a href="/members/<%=member.id%>">More details</a></p>

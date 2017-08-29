@@ -33,13 +33,16 @@ body {
 
 .profile-pic {
   height: 200px;
-  width: 200px
+  width: 200px;
+  background-size: cover;
+  background-position: top center;
 }
 .info-backing {
   border-radius: 20px;
   background-color: #cd844d;
 }
 .form-sheet {
+  width: 200px;
   border-radius: 20px;
   display: inline-block;
   background-color: #c4844d;
