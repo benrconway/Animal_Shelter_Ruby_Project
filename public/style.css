@@ -1,5 +1,5 @@
 html{
-  color:ivory;
+  color: #FFC192;
 }
 nav, li {
   display: inline;
@@ -23,18 +23,6 @@ body {
   background: url(https://austravelphotography.files.wordpress.com/2014/06/20140613-_mg_7390.jpg) no-repeat fixed center;
   background-size: cover;
 }
-.buttons {
-    border-radius: 25px;
-    background: salmon;
-    width: 100px;
-    height: 30px;
-    margin: 10px, 0px;
-    padding: 10px;
-    cursor: pointer;
-}
-.end_it{
-  margin-left: 30%;
-}
 .ani-pic{
   border-radius: 20px;
 }
@@ -44,6 +32,29 @@ body {
   width: 200px;
   background-size: cover;
   background-position: top center;
+}
+
+.buttons {
+    border-radius: 25px;
+    background: #2D98A5;
+    width: 100px;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.button {
+    border-radius: 25px;
+    background:  #72E4F2;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.end_it{
+  margin-left: 30%;
 }
 .info-backing {
   margin: auto;
@@ -116,4 +127,14 @@ body {
 
 #single-el{
   margin-left: 40%;
+}
+.image-rounded-corners {
+  display: block;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 5px;
+  text-indent: -1000px;
+}
+#image-of-sharon  {
+  background-image: url('https://static.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg');
 }

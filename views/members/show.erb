@@ -12,16 +12,21 @@
 </div>
 <hr/>
 <div class="info-backing">
+  <% if @animals.count == 0 %>
+  <h3><%=@member.name.capitalize %> is currently contemplating which animal to share their wealth with.</h3>
+    <% else %>
   <h3><%=@member.name.capitalize %> currently sponsors the following Nature Advocates:</h3>
 <div class="item-container">
     <% for animal in @animals do %>
     <div class="form-norm">
       <a href="/animals/<%=animal.id%>">
-        <div class="profile-pic ani-pic" style="background-image: url('<%=animal.image%>')"></div>
+        <!--<div class="profile-pic ani-pic" style="background-image: url('<%=animal.image%>')"></div>-->
+        <img class="profile-pic ani-pic" src="<%=animal.image%>" alt="Image of a <%=animal.species%>" />
       </a>
       <p>Name: <%=animal.name%></p>
       <p>Species: <%=animal.species%></p>
     </div>
+  <% end %>
   <% end %>
 </div>
 <br>

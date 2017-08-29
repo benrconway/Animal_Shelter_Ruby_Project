@@ -1,11 +1,11 @@
 <div class="info-backing">
   <h2>Here is a current list of Members</h2>
 <div>
-  <p><a href="/members/new">Click here to join our Society</a></p>
+  <p><a class="button" href="/members/new">Click here to join our Society</a></p>
 </div>
   <% for member in @members do %>
 <div class="form-norm">
-  <a href="/members/<%=member.id%>"><div class="profile-pic ani-pic" style="background-image: url('<%=member.picture%>')"></div></a>
+  <a href="/members/<%=member.id%>"><img class="profile-pic ani-pic" src="<%=member.picture%>" alt="A picture of <%=member.name%>"/></a>
   <p>Name:<%=member.name%></p>
 
   <p><a href="/members/<%=member.id%>">More details</a></p>
