@@ -67,4 +67,11 @@ class Sponsorship
      result = SqlRunner.run(sql, [@animal_id]).first()
      return Animal.new(result)
    end
+
+   def Sponsorship.total_value()
+     records = Sponsorship.all()
+     total_value = 0
+     records.each() {|record| total_value += record.value}
+     return total_value
+   end
 end

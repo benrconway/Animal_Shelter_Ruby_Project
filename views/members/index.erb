@@ -4,7 +4,7 @@
   <p><a href="/members/new">Click here to join our Society</a></p>
 </div>
   <% for member in @members do %>
-<div class="form-sheet">
+<div class="form-norm">
   <a href="/members/<%=member.id%>"><div class="profile-pic ani-pic" style="background-image: url('<%=member.picture%>')"></div></a>
   <p>Name:<%=member.name%></p>
 

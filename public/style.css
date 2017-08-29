@@ -1,6 +1,12 @@
 nav, li {
   display: inline;
 }
+a:visited{
+  color: wheat;
+}
+a:link{
+  color: wheat;
+}
 
 footer {
   bottom: 0;
@@ -26,7 +32,9 @@ body {
     margin: 10px, 0px;
     padding: 10px;
 }
-
+.end_it{
+  margin-left: 30%;
+}
 .ani-pic{
   border-radius: 20px;
 }
@@ -38,10 +46,14 @@ body {
   background-position: top center;
 }
 .info-backing {
-  border-radius: 20px;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
   background-color: #cd844d;
 }
-.form-sheet {
+
+.form-norm {
   width: 200px;
   border-radius: 20px;
   display: inline-block;
@@ -58,4 +70,9 @@ body {
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+#pledges{
+  display:flex;
+  flex-grow: 1;
 }

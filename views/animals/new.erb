@@ -19,7 +19,7 @@
     <input type="text" name="habitat" id="habitat">
   <br>
   <label for="first_sighting">First Sighting</label>
-    <input type="date" name="first_sighting" id="first_sighting"/>
+    <input type="date" name="first_sighting" id="first_sighting" required value="<%= Date.today.strftime("%Y-%m-%d")%>"/>
   <br>
   <label for="image_url">Enter image url here:</label>
     <input type="text" name="image" id="image_url"/>

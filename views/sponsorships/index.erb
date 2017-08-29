@@ -1,13 +1,13 @@
 <div class="info-backing">
   <h2>Sponsorships</h2>
   <p>Since opening in August 2017, we have had <%=@members.count()%> members make a total of <%=@sponsorships.count()%> pledges.</p>
-  <p>At present we are lucky enough to be collecting £<!-- pledge total value -->/month to support our animal advocates in their endeavours<br>
+  <p>At present we are lucky enough to be collecting £<%=Sponsorship.total_value%> /month to support our animal advocates in their endeavours<br>
   You too can add your name to those below by simply <a href="/members/new">joining</a> the Red Centre Conservation Society and making a pledge below.</p>
 <div>
   <p><a href="/sponsorships/new">Make a pledge today!</a></p>
 <!--flex, flex grow?, remove width restriction. -->
   <% for record in @sponsorships do %>
-<div class="form-sheet">
+<div class="pledges form-norm">
   <div class="profile-pic ani-pic" style="background-image: url('<%=record.sponsor.picture%>')"></div>
     <div>
       <p>Pledge number:<%=record.id%></p>

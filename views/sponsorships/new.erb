@@ -19,7 +19,7 @@
   <p>£<input type="number" name="value" id="pledge_value">/month</p>
   <br>
   <label for="sponsorship_start_date">Starting from:</label>
-  <input type="date" name="date_sponsored" id="sponsorship_start_date">
+  <input type="date" name="date_sponsored" id="sponsorship_start_date" required value="<%= Date.today.strftime("%Y-%m-%d")%>">
   <input type="submit" value="Submit Pledge"/>
 </form>
 <!-- add a button for joining if you aren't already a member -->
