@@ -23,10 +23,6 @@ body {
   background: url(https://austravelphotography.files.wordpress.com/2014/06/20140613-_mg_7390.jpg) no-repeat fixed center;
   background-size: cover;
 }
-.beside{
-  display:inline;
-}
-
 .buttons {
     border-radius: 25px;
     background: salmon;
@@ -34,6 +30,7 @@ body {
     height: 30px;
     margin: 10px, 0px;
     padding: 10px;
+    cursor: pointer;
 }
 .end_it{
   margin-left: 30%;
@@ -84,6 +81,7 @@ body {
   margin: 10px;
 }
 .form-norm {
+  margin: 10px;
   width: 200px;
   border-radius: 20px;
   display: inline-block;

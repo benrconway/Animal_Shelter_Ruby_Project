@@ -1,25 +1,27 @@
-<h2>Enter the details of your pledge here</h2>
+<div class="backing-2">
+    <h2>Enter the details of your pledge here</h2>
+<div class="form-new">
+    <form action="/sponsorships" method="POST">
+      <label for="member_name">Member</label>
+        <select name="member_id" id="member_name">
+          <% for member in @members do  %>
+          <option value="<%=member.id%>"><%=member.name%></option>
+          <% end %>
+        </select>
+      <br>
+      <label for="animal_being_sponsored">Animal</label>
+        <select name="animal_id" id="animal_being_sponsored">
+          <% for animal in @animals do  %>
+          <option value="<%=animal.id%>"><%=animal.name%></option>
+          <% end %>
+        </select>
+      <br>
+      <label for="pledge_value">Pledge value</label> <p>£<input type="number" name="value" id="pledge_value"> /month</p>
 
-<form action="/sponsorships" method="POST">
-  <label for="member_name">Member</label>
-  <select name="member_id" id="member_name">
-    <% for member in @members do  %>
-    <option value="<%=member.id%>"><%=member.name%></option>
-    <% end %>
-  </select>
-  <br>
-  <label for="animal_being_sponsored">Animal</label>
-  <select name="animal_id" id="animal_being_sponsored">
-    <% for animal in @animals do  %>
-    <option value="<%=animal.id%>"><%=animal.name%></option>
-    <% end %>
-  </select>
-  <br>
-  <label for="pledge_value">Pledge value</label>
-  <p>£<input type="number" name="value" id="pledge_value">/month</p>
-  <br>
-  <label for="sponsorship_start_date">Starting from:</label>
-  <input type="date" name="date_sponsored" id="sponsorship_start_date" required value="<%= Date.today.strftime("%Y-%m-%d")%>">
-  <input type="submit" value="Submit Pledge"/>
-</form>
-<!-- add a button for joining if you aren't already a member -->
+      <label for="sponsorship_start_date">Starting from:</label>
+        <input type="date" name="date_sponsored" id="sponsorship_start_date" required value="<%= Date.today.strftime("%Y-%m-%d")%>">
+        <input type="submit" value="Submit Pledge"/>
+    </form>
+  </div>
+    <!-- add a button for joining if you aren't already a member -->
+</div>
