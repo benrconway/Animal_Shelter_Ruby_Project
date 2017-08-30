@@ -1,11 +1,11 @@
-<div class="backing-2">
+<div class="info-backing">
   <h2>Sponsorships</h2>
   <p>Since opening in August 2017, we have had <%=@members.count()%> members make a total of <%=@sponsorships.count()%> pledges.</p>
   <p>At present we are lucky enough to be collecting £<%=Sponsorship.total_value%> /month to support our animal advocates in their endeavours<br>
   You too can add your name to those below by simply joining the Red Centre Conservation Society and making a pledge below.</p>
 <div>
   <div class="to-the-right">
-    <a class="button" href="/sponsorships/new">Make a pledge!</a><a class="button" href="/members/new">Join now</a>
+    <a class="button" href="/sponsorships/new">Make a pledge!</a>
 </div>
 
     <div class="form-container">
@@ -13,9 +13,11 @@
       <div class="form-pledge">
         <div class="profile-pic ani-pic" style="background-image: url('<%=record.sponsor.picture%>')"></div>
           <div class="pledge-text">
-            <p>Pledge number:<%=record.id%></p>
-            <p><a href="/members/<%=record.member_id%>"><%=record.sponsor.name.capitalize%></a> is currently sponsoring <a href="/animals/<%=record.animal_id%>"><%=record.sponsored.name.capitalize%></a></p>
-            <p><a href="/sponsorships/<%=record.id%>">Click for more details</a></p>
+            <ul class="animal-info">
+            <li>Pledge number:<%=record.id%></li>
+            <li><a href="/members/<%=record.member_id%>"><%=record.sponsor.name.capitalize%></a> is currently sponsoring <a href="/animals/<%=record.animal_id%>"><%=record.sponsored.name.capitalize%></a></li>
+            <li><a href="/sponsorships/<%=record.id%>">Click for more details</a></li>
+          </ul>
           </div>
         <div class="profile-pic ani-pic" style="background-image: url('<%=record.sponsored.image%>')"></div>
         </div>

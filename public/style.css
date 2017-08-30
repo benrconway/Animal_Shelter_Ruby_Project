@@ -39,19 +39,19 @@ body {
     background: #2D98A5;
     width: 100px;
     height: 30px;
-    margin: 10px 0px;
-    padding: 10px;
+    margin: 10px 20px 0 0;
+    padding: 10px 20px 10px 15px;
     cursor: pointer;
 }
 
 .button {
+    display: block;
     border-radius: 25px;
-    background:  #72E4F2;
-    width: 100px;
-    height: 30px;
+    background: #2D98A5;
+    width: 200px;
+    height: 20px;
     margin: 10px;
-    padding: 10px;
-    cursor: pointer;
+    padding: 10px 20px 10px 20px;
     text-align: center;
 }
 .button:hover{
@@ -71,9 +71,9 @@ body {
 
 }
 .info-backing {
-  margin: auto;
-  width: 920px;
-  padding: 10px;
+  margin: 40px;
+  width: 860px;
+  padding: 30px;
   border-radius: 10px;
   background-color: #cd844d;
 }
@@ -106,6 +106,7 @@ body {
   margin: 10px;
 }
 .form-norm {
+  height: 360px;
   margin: 10px;
   width: 200px;
   border-radius: 20px;
@@ -147,4 +148,30 @@ body {
 
 #single-el{
   margin-left: 40%;
+}
+/* additions */
+h2  {
+  margin: 0 0 1em 0;
+}
+p {
+  margin: 0 0 1em 0;
+}
+.form-norm p {
+  margin: 10px;
+}
+ul.animal-info  {
+  list-style-type: none;
+  padding: 0 0 0 10px;
+}
+ul.animal-info li {
+  margin: 0 0 10px 0;
+
+}
+label {
+  display: inline-block;
+  width: 200px;
+  line-height: 2em;
+}
+input[type=button]{
+  display: block;
 }
