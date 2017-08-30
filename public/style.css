@@ -52,6 +52,13 @@ body {
     margin: 10px;
     padding: 10px;
     cursor: pointer;
+    text-align: center;
+}
+.button:hover{
+  background: #5EBBC7;
+}
+.buttons:hover{
+  background: #2A8D99;
 }
 .end_it{
   margin-left: 30%;
@@ -103,6 +110,7 @@ body {
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
+  flex-wrap: wrap;
 }
 .ico {
   height: 35px;
@@ -111,6 +119,11 @@ body {
 
 .pledge-text{
   padding: 10px;
+}
+
+.to-the-right{
+  display:flex;
+  justify-content: flex-end;
 }
 
 #all_over {
@@ -127,14 +140,4 @@ body {
 
 #single-el{
   margin-left: 40%;
-}
-.image-rounded-corners {
-  display: block;
-  width: 1000px;
-  height: 1000px;
-  border-radius: 5px;
-  text-indent: -1000px;
-}
-#image-of-sharon  {
-  background-image: url('https://static.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg');
 }

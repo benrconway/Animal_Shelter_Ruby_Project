@@ -3,20 +3,21 @@
 <div class="form-new">
     <form action="/sponsorships" method="POST">
       <label for="member_name">Member</label>
-        <select name="member_id" id="member_name">
+        <select name="member_id" id="member_name" required>
           <% for member in @members do  %>
           <option value="<%=member.id%>"><%=member.name%></option>
           <% end %>
         </select>
       <br>
       <label for="animal_being_sponsored">Animal</label>
-        <select name="animal_id" id="animal_being_sponsored">
+        <select name="animal_id" id="animal_being_sponsored" required>
           <% for animal in @animals do  %>
           <option value="<%=animal.id%>"><%=animal.name%></option>
           <% end %>
         </select>
       <br>
-      <label for="pledge_value">Pledge value</label> <p>£<input type="number" name="value" id="pledge_value"> /month</p>
+      <label for="pledge_value">Pledge value</label>
+      <p>£<input type="number" name="value" id="pledge_value" required/> /month</p>
 
       <label for="sponsorship_start_date">Starting from:</label>
         <input type="date" name="date_sponsored" id="sponsorship_start_date" required value="<%= Date.today.strftime("%Y-%m-%d")%>">

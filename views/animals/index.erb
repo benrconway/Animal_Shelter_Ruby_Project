@@ -1,13 +1,14 @@
 <div class="info-backing">
-  <h2>Here is a list of our friends from Nature. They work hard every day to help the environment stabilise and grow in its natural abundance,<br>
-   and now you too can lend them a hand by sponsoring them to continue their great work!</h2>
+  <h2>Here is a list of our friends from Nature.</h2>
+  <p> They work hard every day to help the environment stabilise and grow in its natural abundance,<br>
+   and now you too can lend them a hand by sponsoring them to continue their great work!</p>
 <p><a class="button" href="/animals/new">Add a new Animal to the list</a></p>
 
 <div class="item-container">
 <% for animal in @animals do %>
   <div class="form-norm">
     <a href="/animals/<%=animal.id%>">
-      <img class="profile-pic ani-pic" src="<%=animal.image%>" alt="Image of a <%=animal.species%>"/>
+      <div class="profile-pic ani-pic" style="background-image: url('<%=animal.image%>');" alt="A picture of <%=animal.name%>"></div>
     </a>
     <p>Name: <%=animal.name%></p>
     <p>Species: <%=animal.species%></p>

@@ -1,7 +1,7 @@
 <div id="single-el" class="info-backing form-norm">
   <h2><%=@member.name%></h2>
   <div class="profile-pic" style="background-image: url('<%=@member.picture%>')"></div>
-
+  <a class="image-rounded-corners profile-pic" id="image-of-<%=@member.name.downcase%>">Image of <%=@member.name%></a>
     <form action="/members/<%=@member.id%>/edit" method="GET">
       <input type="submit" value="Edit">
     </form>
@@ -20,8 +20,8 @@
     <% for animal in @animals do %>
     <div class="form-norm">
       <a href="/animals/<%=animal.id%>">
-        <!--<div class="profile-pic ani-pic" style="background-image: url('<%=animal.image%>')"></div>-->
-        <img class="profile-pic ani-pic" src="<%=animal.image%>" alt="Image of a <%=animal.species%>" />
+        <div class="profile-pic ani-pic" style="background-image: url('<%=animal.image%>')"></div>
+        <!-- <img class="profile-pic ani-pic" src="<%=animal.image%>" alt="Image of a <%=animal.species%>" /> -->
       </a>
       <p>Name: <%=animal.name%></p>
       <p>Species: <%=animal.species%></p>

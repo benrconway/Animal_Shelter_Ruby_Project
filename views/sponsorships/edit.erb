@@ -4,24 +4,24 @@
   <form action="/sponsorships/<%=@sponsorship.id%>" method="POST">
     <p>Pledge number:<%=@sponsorship.id%></p>
     <label for="member_name">Member:</label>
-    <select name="member_id" id="member_name">
+    <select name="member_id" id="member_name" required>
       <% for member in @members do  %>
         <option <%= 'selected' if member.id == @sponsorship.member_id %> value="<%=member.id%>"><%=member.name%></option>
       <% end %>
     </select>
     <br>
     <label for="animal_being_sponsored">Animal:</label>
-    <select name="animal_id" id="animal_being_sponsored">
+    <select name="animal_id" id="animal_being_sponsored" required>
       <% for animal in @animals do  %>
         <option value="<%=animal.id%>" <%= 'selected' if animal.id == @sponsorship.animal_id%>><%=animal.name%></option>
       <% end %>
     </select>
     <br>
     <label for="pledge_value">Pledge value:</label>
-    <p>£<input type="number" name="value" id="pledge_value" value="<%=@sponsorship.value%>">/month</p>
+    <p>£<input type="number" name="value" id="pledge_value" value="<%=@sponsorship.value%>" required/>/month</p>
     <br>
     <label for="sponsorship_start_date">Starting from:</label>
-    <input type="date" name="date_sponsored" id="sponsorship_start_date" value="<%=@sponsorship.date_sponsored%>">
+    <input type="date" name="date_sponsored" id="sponsorship_start_date" value="<%=@sponsorship.date_sponsored%>" required/>
     <br>
     <input type="submit" value="Submit Changes"/>
   </form>

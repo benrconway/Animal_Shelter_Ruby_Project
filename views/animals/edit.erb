@@ -2,15 +2,15 @@
   <h2>Edit existing animal</h2>
   <div>
     <div class="profile-pic ani-pic" style="background-image: url('<%=@animal.image%>')"></div>
-    <form method="POST" action="/animals/<%=@animal.id%>">
+    <form method="POST" action="/animals/<%=@animal.id%>"> 
       <label for="name_of_animal">Name:</label>
-      <input type="text" name="name" id="name_of_animal" value="<%=@animal.name%>"/>
+      <input type="text" name="name" id="name_of_animal" value="<%=@animal.name%>" required/>
       <br>
       <label for="species">Species:</label>
-      <input type="text" name="species" id="species" value="<%=@animal.species%>"/>
+      <input type="text" name="species" id="species" value="<%=@animal.species%>" required/>
       <br>
       <label for="ecological_status">Status</label>
-      <select id="ecological_status" name="ecological_status" value="<%=@animal.ecological_status%>">
+      <select id="ecological_status" name="ecological_status" value="<%=@animal.ecological_status%>" required>
         <option value="endangered">Endangered</option>
         <option value="conservation dependant">Conservation dependant</option>
         <option value="near threatened">Near threatened</option>
@@ -19,13 +19,13 @@
       </select>
       <br>
       <label for="habitat">Habitat</label>
-      <input type="text" name="habitat" id="habitat" value="<%=@animal.habitat%>"/>
+      <input type="text" name="habitat" id="habitat" value="<%=@animal.habitat%>" required/>
       <br>
       <label for="first_sighting">First Sighting</label>
-      <input type="date" name="first_sighting" id="first_sighting" value="<%=@animal.first_sighting%>"/>
+      <input type="date" name="first_sighting" id="first_sighting" value="<%=@animal.first_sighting%>" required/>
       <br>
       <label for="image_url">Enter image url here:</label>
-      <input type="text" name="image" id="image_url" value="<%=@animal.image%>"/>
+      <input type="text" name="image" id="image_url" value="<%=@animal.image%>" required/>
       <br>
       <input type="submit" value="Submit Changes"/>
     </form>

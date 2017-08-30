@@ -35,6 +35,11 @@ member4 = Member.new({
   })
 member4.save()
 
+member5 =  Member.new({
+  "name" => "Giuseppe",
+  "picture" => "https://thumbs.dreamstime.com/z/italian-chef-4995744.jpg"
+  })
+member5.save()
 
 animal1 = Animal.new({
   "name" => "Terry",
@@ -79,9 +84,44 @@ animal4 = Animal.new({
 
   animal4.save()
 
+  animal5 = Animal.new({
+    "name" => "Scarabonster",
+    "species" => "Marsupial Lion",
+    "ecological_status" => "critically endangered",
+    "habitat" => "tropical oases",
+    "first_sighting" => "2014-03-15",
+    "image" => "https://media-cache-ec0.pinimg.com/736x/33/c4/35/33c435409a8e4ace80a821ffeb3cf68b.jpg"
+    })
+
+  animal5.save()
+
+  animal6 = Animal.new({
+    "name" => "Perentie",
+    "species" => "Monitor Lizard",
+    "ecological_status" => "near threaened",
+    "habitat" => "central and western deserts",
+    "first_sighting" => "2000-02-15",
+    "image" => "https://c2.staticflickr.com/2/1349/5128641178_4bb7afd39a_z.jpg"
+    })
+
+  animal6.save()
+
+  animal7 = Animal.new({
+    "name" => "Erin",
+    "species" => "Wedge-Tailed Eagle",
+    "ecological_status" => "stable",
+    "habitat" => "mulga plains",
+    "first_sighting" => "2010-08-23",
+    "image" => "https://ih1.redbubble.net/image.4181890.9542/flat,1000x1000,075,f.jpg"
+    })
+
+  animal7.save()
+
+
+
 s_ship1 = Sponsorship.new({
   "animal_id" => animal1.id,
-  "member_id" => member1.id,
+  "member_id" => member3.id,
   "value" => 500,
   "date_sponsored" => "April 18 2017"
   })
