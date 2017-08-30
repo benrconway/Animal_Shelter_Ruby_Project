@@ -9,6 +9,10 @@ get "/" do
   erb(:index)
 end
 
+get "/ideas" do
+  erb(:ideas)
+end
+
 get "/forget_it" do
   erb(:all_over)
 end
