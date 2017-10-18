@@ -35,20 +35,22 @@ relationship in the database, the join table would have a class representing its
 slightly differentiated from the many other Animal Shelters produced by my classmates.
 
 During the implementation, I learnt a great deal about debugging issues raised in all three sectors of Model, View and Controller.
-  * Trying to insertinformation into databases/tables/columns that didn't exist
-  * Methods calling on things that weren't in their scope.
-  * Views that didn't exist or HTML code that wasn't in place.
-  * and most importantly the great beast that is CSS and how to get my head around it on the fly.
+  * Table insertions and debugging any resulting error messages
+  * Understanding the scope of methods I was writing
+  * Debugging issues raised by the interaction of the Controller and Views
+  * Learning how to manipulate CSS and bring in UX considerations.
   
-I managed to implement most of the MVP and strangely enough some of the extensions(like CRUD actions) within the first
-two days of coding out my pre-made plan. Things started to go awry as I began down the not-so-recently-travelled path of 
-HTML/CSS.
-Buttons and images that were in perfect positions before I add the image were suddenly on the opposite side of my view.
-Slowly and with much research and help from colleagues and staff it slowly made itself into some kind of shape.
-I noticed though that everyone had great advice, but for the most part fit best to their own style of design and 
-sense of space. 
+I achieved the MVP and two of the four extensions within the project timeframe. I then presented my work and learning to colleagues and instructors.  
 
-Being able to listen to their ideas and extract the information that would help me the most saw this project take on its
-present form. It is not completed, but at present I am quite happy with the results. A few of the buttons need to be
-changed.
-I learnt a lot during this project and I look forward to learning more as I refactor and continue personal study of 
+Lessons taken:
+* How to follow a stack trace for finding and correcting errors.
+* How to manage CSS, and controller interactions with the front-end, models and database.
+* Understanding why it is important to readability of code for the logic of an application to sit in appropriate places. "Fat models, slim controllers" and 2D views
+
+Challenges to work on:
+* Take time to learn how CSS works properly.
+* Expand my understanding of Ruby functionality beyond this small brief.
+* Manage personal time to gain greater efficiency and output.
+
+
+All in all, I learnt at least as much about myself from this project as I did about Ruby, Sinatra, HTML/CSS and SQL. I am looking forward to coming back to this and refactoring it soon.
