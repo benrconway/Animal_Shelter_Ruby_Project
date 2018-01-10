@@ -1,6 +1,6 @@
 # Conservation_Website_Ruby_Project
 
-After 4 weeks of study at CodeClan, I was pesented with the following brief to consolidate of my current learning Ruby fundamentals, TDD, Object Oriented Programming, Web Programming and Database interactions.
+After 4 weeks of study at CodeClan, I was pesented with the following brief to consolidate of my current learning of Ruby fundamentals, TDD, Object Oriented Programming, Web Programming and Database interactions.
 ___
 
 ### Animal Shelter
